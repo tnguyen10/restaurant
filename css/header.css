@@ -2,15 +2,16 @@ header > h1 {
     flex: 9 0 auto;
 }
 
-header p {
+header a, header a:focus, header a:visited {
     flex: 1 0 auto;
     cursor: pointer; 
     text-decoration: underline solid #ba5c0f;
     text-decoration-thickness: 3px;
     text-underline-offset: 2px;
+    color: #3d3d3d;
 }
 
-header p:hover {
+header a:hover {
     font-weight: bold;
     text-decoration-thickness: 5px;
     text-underline-offset: 5px;
