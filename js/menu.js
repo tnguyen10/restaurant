@@ -28,11 +28,18 @@ const fillCard = (cardHTML, info) => {
   const template = document.createElement("template");
   template.innerHTML = cardHTML.trim();
   const card = template.content.firstChild;
+  card.querySelector(".card-front .card-title").innerText = info.title;
+  card.querySelector(".card-front .card-description").innerText =
+    info.description;
+  card.querySelector(".card-front .card-image").src =
+    "../images/" + info.image + ".png";
+  return card;
+};
 
-  card.querySelector(".card-title").innerText = info.title;
-  card.querySelector(".card-description").innerText = info.description;
-  card.querySelector(".card-image").src = "../images/" + info.image + ".png";
-
+const addFlipListener = (card) => {
+  card.addEventListener("click", function (event) {
+    card.querySelector(".card-inner").classList.toggle("flip");
+  });
   return card;
 };
 
@@ -40,10 +47,10 @@ const loadMenu = (info) => {
   fetch("../htmls/card.html")
     .then((data) => data.text())
     .then(function (html) {
-      data.map((info) => {
-        document
-          .querySelector(".menu-content")
-          .appendChild(fillCard(html, info));
+      data.forEach(function (info) {
+        let card = fillCard(html, info);
+        card = addFlipListener(card);
+        document.querySelector(".menu-content").appendChild(card);
       });
     });
 };
