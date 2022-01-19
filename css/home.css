@@ -1,9 +1,9 @@
-.homeContent {
+.content {
     display: flex;
     align-items: center;
     margin: 0 0 0 5%;
 }
 
-.homeContent div {
+.content div {
     margin-left: 4%;
 }
