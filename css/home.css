@@ -4,6 +4,10 @@
     margin: 0 0 0 5%;
 }
 
-.content div {
+.home-content {
     margin-left: 4%;
+}
+
+.home-content h1 {
+    font-size: 3em;
 }
