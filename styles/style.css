@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #3d3d3d;
+    margin-left: 2%;
+    background-color: #fffffc;
+}
+
+
+header, footer, .homeContent {
+    display: flex;
+    align-items: flex-end;
+}

@@ -1,0 +1,17 @@
+header > h1 {
+    flex: 9 0 auto;
+}
+
+header p {
+    flex: 1 0 auto;
+    cursor: pointer; 
+    text-decoration: underline solid #ba5c0f;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 2px;
+}
+
+header p:hover {
+    font-weight: bold;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 5px;
+}

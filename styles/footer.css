@@ -1,0 +1,8 @@
+footer {
+    font-size: 0.7em;
+    justify-content: start;
+}
+
+footer > div {
+    margin: 1%;
+}
